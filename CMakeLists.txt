@@ -3,7 +3,7 @@ project (myproject)
 enable_language(CUDA)
 find_package (CUDA REQUIRED)
 include_directories ("${CUDA_INCLUDE_DIRS}")
-include_directories ("${PROJECT_SOURCE_DIR}/third_party/eigen")
+include_directories ("${PROJECT_SOURCE_DIR}/third_party/eigen-3.4.0")
 # 查找当前目录下的所有源文件
 # 并将名称保存到 DIR_SRCS 变量
 aux_source_directory(. DIR_SRCS)
