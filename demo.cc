@@ -9,9 +9,7 @@
 #include <iostream>
 
 #include "src/layer.h"
-//#include "src/layer/conv.h"
-//#include "src/basic_conv/basic_conv_gpu.h"
-#include "src/basic/conv_basic.h"
+#include "src/layer/conv.h"
 #include "src/layer/fully_connected.h"
 #include "src/layer/ave_pooling.h"
 #include "src/layer/max_pooling.h"
@@ -25,6 +23,8 @@
 #include "src/network.h"
 #include "src/optimizer.h"
 #include "src/optimizer/sgd.h"
+// new basic
+#include "src/basic/conv_basic.h"
 
 int main() {
   // data
