@@ -1,8 +1,12 @@
 #include <cmath>
 #include <iostream>
 #include "gpu_forward.h"
-#define TILE_WIDTH 20
-__constant__ float Mask[5000];
+#include <cuda_runtime_api.h>
+#include "device_launch_parameters.h"
+
+
+#define TILE_WIDTH 20;
+__constant__ float Mask[6000];
 
 __global__ void conv_forward_kernel(float *y, const float *x, const float *k, const int B, const int M, const int C, const int H, const int W, const int K)
 {
