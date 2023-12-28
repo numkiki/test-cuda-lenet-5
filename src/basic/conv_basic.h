@@ -44,9 +44,7 @@ public:
                                 channel_in(channel_in), height_in(height_in), width_in(width_in),
                                 channel_out(channel_out), height_kernel(height_kernel),
                                 width_kernel(width_kernel), stride(stride), pad_w(pad_w), pad_h(pad_h)
-     {
-          init();
-     }
+     { init(); }
 
      void forward(const Matrix &bottom);
      void backward(const Matrix &bottom, const Matrix &grad_top);
@@ -54,7 +52,7 @@ public:
      int output_dim() { return dim_out; }
      std::vector<float> get_parameters() const;
      std::vector<float> get_derivatives() const;
-     void set_parameters(const std::vector<float> &param);
+     void set_parameters(const std::vector<float>& param);
 };
 
-#endif
+#endif // SRC_LAYER_BASIC_CONV_H_
